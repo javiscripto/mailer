@@ -33,7 +33,6 @@ router.post("/send-email", [
     };
 
     await transporter.sendMail(mailContent);
-    console.log(mailContent)
     res.status(200).json({ message: "Correo enviado exitosamente" });
   } catch (error) {
     console.error(`Error al enviar el correo: ${error}`);
